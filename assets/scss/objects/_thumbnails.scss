@@ -1,0 +1,18 @@
+.image-thumbnail {
+  display: inline-block;
+  overflow: hidden;
+  max-width: 150px;
+  max-height: 150px;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  a { display: block; }
+  &:hover {
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+  }
+}

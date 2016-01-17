@@ -32,7 +32,6 @@ a {
   color: inherit; }
 
 img {
-  max-width: 100%;
   height: auto;
   border: 0; }
 
@@ -70,8 +69,31 @@ h1 {
   font-size: 40px;
   text-align: center; }
 
+a {
+  color: #56B68B; }
+  a:hover {
+    color: #327456; }
+
 header {
   background-color: #fff;
   border-bottom: 3px solid #e6e6e6;
   padding-top: 40px;
   padding-bottom: 40px; }
+
+.image-thumbnail {
+  display: inline-block;
+  overflow: hidden;
+  max-width: 150px;
+  max-height: 150px;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease; }
+  .image-thumbnail a {
+    display: block; }
+  .image-thumbnail:hover {
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02); }
