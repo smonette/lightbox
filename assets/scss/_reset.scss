@@ -1,0 +1,89 @@
+// Nice text rendering and sizing
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+// BLOCK ELEMENTS
+// --------------
+
+// No default margins or paddings
+$no-margin: "h1,h2,h3,h4,p,blockquote,figure,ol,ul";
+#{$no-margin} {
+  margin: 0;
+  padding: 0;
+}
+
+$display-block: "article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary,li";
+#{$display-block} {
+  display: block;
+}
+
+// List of block elements
+$border-box: "address, article, aside, audio, blockquote, canvas, dd, div, dl, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, input, noscript, ol, output, p, pre, section, table, tfoot, ul, video, li";
+
+// Set up sane box-sizing
+#{$border-box} {
+  box-sizing: border-box;
+}
+
+// TEXT AND IMAGE RULES
+// --------------------
+
+// No heading styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+// No more ugly default links
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Automatically size images nicely
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+// TABLE
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// FORMS
+// -----
+
+// Correct defaults and some inheritance issues
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button, 
+input[type='button'], 
+input[type='submit'],
+input[type='image'] {
+  outline: none;
+  border: none;
+}

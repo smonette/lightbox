@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900);
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  margin: 0; }
+
+h1, h2, h3, h4, p, blockquote, figure, ol, ul {
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary, li {
+  display: block; }
+
+address, article, aside, audio, blockquote, canvas, dd, div, dl, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, input, noscript, ol, output, p, pre, section, table, tfoot, ul, video, li {
+  box-sizing: border-box; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: normal; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button,
+input[type='button'],
+input[type='submit'],
+input[type='image'] {
+  outline: none;
+  border: none; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #555459;
+  background-color: #f3f3f3; }
+
+.row {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+h1 {
+  font-size: 40px;
+  text-align: center; }
+
+header {
+  background-color: #fff;
+  border-bottom: 3px solid #e6e6e6;
+  padding-top: 40px;
+  padding-bottom: 40px; }

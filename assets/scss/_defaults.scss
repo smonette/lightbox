@@ -1,0 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900);
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: $charcoal;
+  background-color: $lt-grey;
+}
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Typography
+h1 { 
+  font-size: 40px; 
+  text-align: center;
+}
