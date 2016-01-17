@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     // Watch for changes; perform relevant task
     watch: {
       sass: {
-        files: ['assets/scss/**'],
+        files: ['scss/**'],
         tasks: ['sass']
       }
     },
@@ -29,7 +29,6 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask("compile", ['sass']);
-
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-sass');
 };
