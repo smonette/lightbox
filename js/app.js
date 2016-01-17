@@ -27,7 +27,7 @@ window.onload = function() {
 
     for(i = 0; i < photos.length; i++) {
       var imgURL = '<img src="https://farm'+ photos[i].farm +'.staticflickr.com/' + photos[i].server + '/'+ photos[i].id + '_' + photos[i].secret + '.jpg'+ '"" />';
-      var thumb = '<div class="image-thumbnail"><a href="#" class="thumbnail-target" data-user="'+ user +'" data-id="' + photos[i].id + '"'+ '>'+ imgURL +'</a></div>';
+      var thumb = '<div class="image-thumbnail"><a href="#" class="thumbnail-target" data-index="'+ i +'" data-user="'+ user +'" data-id="' + photos[i].id + '"'+ '>'+ imgURL +'</a></div>';
       document.getElementById('photogrid').innerHTML += thumb;
     };
   });

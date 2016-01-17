@@ -107,3 +107,21 @@ header {
     transform: scale(1.02);
     -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02); }
+
+.lightbox-wrapper {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  visibility: hidden; }
+  .lightbox-wrapper.active {
+    visibility: visible; }
+
+.lightbox-image {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center; }
+  .lightbox-image img {
+    box-shadow: 3px 15px 35px #000; }
