@@ -1,0 +1,14 @@
+{
+  "name": "Lightbox",
+  "version": "0.3.0",
+  "description": "Photo lightbox that accessed the flickr api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smonette/lightbox.git"
+  },
+  "dependencies": {
+    "grunt": "~0.4.5",
+    "grunt-sass": "^1.1.0",
+    "grunt-contrib-watch": "~0.6.1"
+  }
+}
