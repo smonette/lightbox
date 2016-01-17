@@ -19,20 +19,17 @@ function getPhotos(path, callback) {
 window.onload = function() {
 
   getPhotos(apiURL, function(data){
-    var username = data['photoset'].owner;
+    document.getElementById('username').innerHTML = data['photoset'].ownername
+    
+    var user = data['photoset'].owner;
     var photos = data['photoset'].photo;
+
 
     for(i = 0; i < photos.length; i++) {
       var imgURL = '<img src="https://farm'+ photos[i].farm +'.staticflickr.com/' + photos[i].server + '/'+ photos[i].id + '_' + photos[i].secret + '.jpg'+ '"" />';
-      var thumb = '<div class="image-thumbnail"><a href="#" data-user="'+ username +'" data-id="' + photos[i].id + '"'+ '>'+ imgURL +'</a></div>';
+      var thumb = '<div class="image-thumbnail"><a href="#" class="thumbnail-target" data-user="'+ user +'" data-id="' + photos[i].id + '"'+ '>'+ imgURL +'</a></div>';
       document.getElementById('photogrid').innerHTML += thumb;
-      console.log(thumb);
     };
   });
 
 }
-
-
-
-
-      // var thumb = '<div class="image-thumbnail"><a href="https://www.flickr.com/photos/' + username + '/' + photos[i].id + '">'+ imgURL +'</a></div>';

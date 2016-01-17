@@ -11,12 +11,23 @@ body {
   margin: 0 auto;
 }
 
-// Typography
+// Default Typography
 h1 { 
   font-size: 40px; 
-  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 a {
   color: $mint;
   &:hover { color: darken($mint, 20%); }
+}
+
+// functional typography
+.type-centered {
+  text-align: center;
 }

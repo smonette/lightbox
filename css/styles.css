@@ -67,12 +67,21 @@ body {
 
 h1 {
   font-size: 40px;
-  text-align: center; }
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+h2 {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px; }
 
 a {
   color: #56B68B; }
   a:hover {
     color: #327456; }
+
+.type-centered {
+  text-align: center; }
 
 header {
   background-color: #fff;
@@ -85,6 +94,7 @@ header {
   overflow: hidden;
   max-width: 150px;
   max-height: 150px;
+  border-radius: 5px;
   margin-top: 20px;
   margin-right: 10px;
   margin-left: 10px;
