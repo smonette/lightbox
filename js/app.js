@@ -1,4 +1,4 @@
-var apiURL = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=162ae4b12809e3b41cee979360aa2456&photoset_id=72157629896598070&user_id=17903031%40N00&format=json&nojsoncallback=1&api_sig=421cefef122af206387f351a822d1664";
+var apiURL = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=9a00d835e032b9fe05b30215d22b5713&photoset_id=72157631058013910&user_id=29454428%40N08&format=json&nojsoncallback=1&auth_token=72157663679606365-d314110c27b2e8fd&api_sig=f7b0dc3b6f60f938564d0734d71cfdbe";
 
 function getPhotos(path, callback) {
   var flickrRequest = new XMLHttpRequest();
@@ -19,7 +19,7 @@ function getPhotos(path, callback) {
 window.onload = function() {
 
   getPhotos(apiURL, function(data){
-    document.getElementById('username').innerHTML = data['photoset'].ownername
+    document.getElementById('username').innerHTML = data['photoset'].ownername;
     
     var user = data['photoset'].owner;
     var photos = data['photoset'].photo;
@@ -27,7 +27,7 @@ window.onload = function() {
 
     for(i = 0; i < photos.length; i++) {
       var imgURL = '<img src="https://farm'+ photos[i].farm +'.staticflickr.com/' + photos[i].server + '/'+ photos[i].id + '_' + photos[i].secret + '.jpg'+ '"" />';
-      var thumb = '<div class="image-thumbnail"><a href="#" class="thumbnail-target" data-index="'+ i +'" data-user="'+ user +'" data-id="' + photos[i].id + '"'+ '>'+ imgURL +'</a></div>';
+      var thumb = '<div class="image-thumbnail"><a href="#" class="thumbnail-target" data-index="'+ i +'" data-user="'+ user +'" id="' + photos[i].id + '"'+ '>'+ imgURL +'</a></div>';
       document.getElementById('photogrid').innerHTML += thumb;
     };
   });
