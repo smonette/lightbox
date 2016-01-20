@@ -35,15 +35,13 @@ function loadThumbs(data, index){
 };
 
 function loadLightbox(data, index){
-  var flickrURL = 'https://farm'+ data[index].farm +'.staticflickr.com/' + data[index].server + '/'+ data[index].id + '_' + data[index].secret;
-  var lightboxURL = '<img src="'+ flickrURL +'_o.jpg" />';
-  lightboxPhotos.push(lightboxURL);
+  var lightboxImg = '<img src="https://farm'+ data[index].farm +'.staticflickr.com/' + data[index].server + '/'+ data[index].id + '_' + data[index].secret +'_z.jpg" />';
+  lightboxPhotos.push(lightboxImg);
 }
 
 
 function lightboxInit() {
   var thumbnails = document.getElementsByClassName('thumbnail-target');
-
   for (var i = 0; i < thumbnails.length; i++) {
     thumbnails[i].addEventListener('click', function(event){
       event.preventDefault();
@@ -52,11 +50,15 @@ function lightboxInit() {
   }
 }
 
-
 var lightbox = function(image) {
-  var whichThumb = image.getAttribute("data-id");
+  var whichThumb = image.getAttribute("data-index");
   console.log(whichThumb);
-  document.getElementById('lightbox-wraper').setAttribute("class", "active");
+  var bigPhoto = lightboxPhotos[whichThumb];
+
+  console.log(bigPhoto);
+
+  document.getElementById('lightbox-wrapper').setAttribute("class", "active");
+  document.getElementById('lightbox-image').innerHTML = bigPhoto;
 };
 
 

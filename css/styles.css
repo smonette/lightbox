@@ -106,13 +106,13 @@ header {
     -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02); }
 
-.lightbox-wrapper {
+#lightbox-wrapper {
   position: absolute;
   background: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
   visibility: hidden; }
-  .lightbox-wrapper.active {
+  #lightbox-wrapper.active {
     visibility: visible; }
 
 .lightbox-image {
