@@ -28,6 +28,7 @@ function getPhotos(path, callback) {
 };
 
 
+// TO DO: See if there's a way to make this DRY. The img url structure is the same except for the flag at the end
 function loadThumbs(data, index){
   var flickrURL = 'https://farm'+ data[index].farm +'.staticflickr.com/' + data[index].server + '/'+ data[index].id + '_' + data[index].secret;
   var thumb = '<div class="image-thumbnail"><a href="#" class="thumbnail-target" data-index="'+ i +'" data-user="'+ data[index].owner +'" data-id="' + data[i].id + '"'+ '><img src="'+ flickrURL +'_q.jpg" /></a></div>';
