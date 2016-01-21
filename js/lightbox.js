@@ -1,6 +1,3 @@
-// Set API url here
-var apiURL = "https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=bfee4813affe02eddedda4b9d6347ed4&gallery_id=72157663033498841&format=json&nojsoncallback=1&auth_token=72157663035616029-7cfa34fbac179485&api_sig=c2b8c2d1312103f7f372a6d56c93640a";
-
 function getPhotos(path, callback) {
   var flickrRequest = new XMLHttpRequest();
   flickrRequest.onreadystatechange = function() {

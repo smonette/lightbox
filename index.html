@@ -34,13 +34,18 @@
 
 <script src="js/lightbox.js"></script>
 <script>
-  //initialize the photo request
+
+  // !!! NOTE ABOUT THE API !!!
+  // My flickr API auth is expiring after about a day or so, and I can't find a fix for this.
+  // For demo purposes, I've added the JSON data to a file included within this project.
+  // Added perk: it works off-line if needed.
+
+  // var apiURL = "https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=4da893af7b3c7f48d653b90f421fce49&gallery_id=72157663033498841&format=json&nojsoncallback=1&auth_token=72157663602655832-93d75203aea47210&api_sig=8ad39e65e4537daf3376b0fc76af7f42";
+  var apiURL = './data.json';
+
   window.onload = function() {
-    // TODO: shouldnt be calling a variable thats set in a different file.
+    //initialize the photo request
     getPhotos(apiURL);
-
-    console.log('its alive');
-
   }
 </script>
 </html>

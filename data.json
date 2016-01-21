@@ -1,5 +1,3 @@
-// Sample data to reference
-
 { "photos": { "page": 1, "pages": 1, "perpage": "500", "total": 24, 
     "photo": [
       { "id": "6610158005", "owner": "44416312@N05", "secret": "8b6529a501", "server": "7152", "farm": 8, "title": "electricity", "ispublic": 1, "isfriend": 0, "isfamily": 0, "is_primary": 1, "has_comment": 0 },
