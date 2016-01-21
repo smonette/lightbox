@@ -23,6 +23,7 @@ h2 {
   margin-bottom: 10px;
 }
 a {
+  line-height: 0;
   color: $mint;
   &:hover { color: darken($mint, 20%); }
 }

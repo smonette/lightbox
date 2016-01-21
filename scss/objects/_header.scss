@@ -1,6 +1,24 @@
 header {
   background-color: #fff;
   border-bottom: 3px solid darken($lt-grey, 5%);
-  padding-top: $big-space;
-  padding-bottom: $big-space;
+  padding-top: $space;
+  padding-bottom: $space;
+}
+
+@keyframes h1-colors {
+    0%   { color: $mint; }
+    25%   { color: $orange; }
+    50%   { color: $pink; }
+    75%   { color: $blue; }
+}
+
+.page-title {
+  color: $mint;
+  animation: h1-colors 5s ease-in 2s infinite alternate;
+}
+
+.flourish:before,
+.flourish:after {
+  content:'✨';
+  padding: 0 15px;
 }
