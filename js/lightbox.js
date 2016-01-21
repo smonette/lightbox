@@ -1,3 +1,7 @@
+// Declaring some variables that'll come in handy later
+var lightboxPhotos;
+var lightboxTitles;
+
 function getPhotos(path, callback) {
   var flickrRequest = new XMLHttpRequest();
   flickrRequest.onreadystatechange = function() {
@@ -5,18 +9,19 @@ function getPhotos(path, callback) {
       if (flickrRequest.status === 200) {
         var data = JSON.parse(flickrRequest.responseText);
         if (callback) callback(data);
-          // if the request is good, set the variables to start formating photos
-          var photos = data['photos'].photo;
-          lightboxPhotos = [];
+        // if the request is good, set the variables to start formating photos
+        var photos = data['photos'].photo;
+        lightboxPhotos = [];
+        lightboxTitles = [];
 
-          for(i = 0; i < photos.length; i++) {
-            // add each image to thumbnail grid
-            loadThumbs(photos, i);
-            // add each to the array of lightbox images
-            loadLightbox(photos, i);
-            // after getPhotos() runs, you can initialize the lightbox
-            lightboxInit();
-          };
+        for(i = 0; i < photos.length; i++) {
+          // add each image to thumbnail grid
+          loadThumbs(photos, i);
+          // add each to the array of lightbox images
+          loadLightbox(photos, i);
+          // after getPhotos() runs, you can initialize the lightbox
+          lightboxInit();
+        };
       }
     }
   };
@@ -24,17 +29,22 @@ function getPhotos(path, callback) {
   flickrRequest.send(); 
 };
 
+function buildURL(farm, server, id, secret, sizeFlag) {
+  var flickrURL = '<img src="https://farm' + farm +'.staticflickr.com/' + server + '/'+ id + '_' + secret + sizeFlag + '.jpg" />';
+  return flickrURL;
+};
 
-// TO DO: See if there's a way to make this DRY. The img url structure is the same except for the flag at the end
 function loadThumbs(data, index){
-  var flickrURL = 'https://farm'+ data[index].farm +'.staticflickr.com/' + data[index].server + '/'+ data[index].id + '_' + data[index].secret;
-  var thumb = '<div class="image-thumbnail"><a href="#" class="thumbnail-target" data-index="'+ i +'" data-user="'+ data[index].owner +'" data-id="' + data[i].id + '"'+ '><img src="'+ flickrURL +'_q.jpg" /></a></div>';
+  var flickrURL = buildURL(data[index].farm, data[index].server, data[index].id, data[index].secret, '_q');
+  var thumb = '<div class="image-thumbnail"><a href="#" class="thumbnail-target" data-index="'+ i +'" data-user="'+ data[index].owner +'" data-id="' + data[i].id + '"'+ '>'+ flickrURL +'</a></div>';
   document.getElementById('photogrid').innerHTML += thumb;
 };
 
 function loadLightbox(data, index){
-  var lightboxImg = '<img src="https://farm'+ data[index].farm +'.staticflickr.com/' + data[index].server + '/'+ data[index].id + '_' + data[index].secret +'.jpg" />';
-  lightboxPhotos.push(lightboxImg);
+  var flickrURL = buildURL(data[index].farm, data[index].server, data[index].id, data[index].secret, '');
+  var imageTitle = data[index].title;
+  lightboxPhotos.push(flickrURL);
+  lightboxTitles.push(flickrURL);
 }
 
 

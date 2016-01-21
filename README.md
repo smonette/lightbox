@@ -21,7 +21,7 @@ This project uses Grunt, [Grunt Sass](https://github.com/sindresorhus/grunt-sass
 * Run `npm install` to install the dependencies. 
 * Run `grunt compile` to build the project (this will create the `css` folder). 
 * Run `grunt watch` to automatically compile future Sass changes.
-* Spin up a local server and open site. _I uses [Anvil](http://anvilformac.com/), but any simple server should do the trick._
+* Spin up a local server and open site. _I use [Anvil](http://anvilformac.com/), but any simple server should do the trick._
 
 ### API Info
 This gallery is built using the flickr API, and displays a currated gallery of photos from [New Years 2016](https://www.flickr.com/photos/flickr/galleries/72157663033498841/). I have noticed that my auth is expiring after about a day. For demo purposes, I included the data in `data.json` that can be called locally, and while offline. (A URL that was functional upon submission is also set, but commented out.) For this reason it's _very_ important to run this on a server (as opposed to just opening index.html), and avoid the dreaded cross origin request errors. 
