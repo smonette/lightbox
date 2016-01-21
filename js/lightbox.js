@@ -42,9 +42,9 @@ function loadThumbs(data, index){
 
 function loadLightbox(data, index){
   var flickrURL = buildURL(data[index].farm, data[index].server, data[index].id, data[index].secret, '');
-  var imageTitle = data[index].title;
+  var flickrTitle = data[index].title;
   lightboxPhotos.push(flickrURL);
-  lightboxTitles.push(flickrURL);
+  lightboxTitles.push(flickrTitle);
 }
 
 
@@ -60,13 +60,12 @@ function lightboxInit() {
 
 var lightbox = function(image) {
   var whichThumb = image.getAttribute("data-index");
-  console.log(whichThumb);
-  var bigPhoto = lightboxPhotos[whichThumb];
-
-  console.log(bigPhoto);
+  var theImage = lightboxPhotos[whichThumb];
+  var theTitle = lightboxTitles[whichThumb];
 
   document.getElementById('lightbox-wrapper').setAttribute("class", "active");
-  document.getElementById('lightbox-image').innerHTML = bigPhoto;
+  document.getElementById('lightbox-image').innerHTML = theImage;
+  document.getElementById('lightbox-image_title').innerHTML = theTitle;
 };
 
 
