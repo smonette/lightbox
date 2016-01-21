@@ -33,7 +33,7 @@ function loadThumbs(data, index){
 };
 
 function loadLightbox(data, index){
-  var lightboxImg = '<img src="https://farm'+ data[index].farm +'.staticflickr.com/' + data[index].server + '/'+ data[index].id + '_' + data[index].secret +'_z.jpg" />';
+  var lightboxImg = '<img src="https://farm'+ data[index].farm +'.staticflickr.com/' + data[index].server + '/'+ data[index].id + '_' + data[index].secret +'.jpg" />';
   lightboxPhotos.push(lightboxImg);
 }
 

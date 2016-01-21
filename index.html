@@ -12,10 +12,14 @@
 
 <body>
   <div class="lightbox-wrapper" id="lightbox-wrapper">
-    <a href="#" class="lightbox-image-prev"></a>
-    <a href="#" class="lightbox-image-next"></a>
-    <div class="lightbox-image" id="lightbox-image"> </div>
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-nav lightbox-nav_prev">&lsaquo; Previous</a>
+      <a href="#" class="lightbox-nav lightbox-nav_next">Next &rsaquo;</a>
+      <div class="lightbox-image" id="lightbox-image"> </div>
+      <div class="lightbox-image_title" id="lightbox-image_title"> </div>
+    </div>
   </div>
+
   <header>
     <div class="row">
       <h1 class="type-centered">Flickr Photo Gallery</h1>    
@@ -39,6 +43,7 @@
   // My flickr API auth is expiring after about a day or so, and I can't find a fix for this.
   // For demo purposes, I've added the JSON data to a file included within this project.
   // Added perk: it works off-line if needed.
+  // Downside: to run this locally you need to set up a server to avoid cross origin request errors
 
   // var apiURL = "https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=4da893af7b3c7f48d653b90f421fce49&gallery_id=72157663033498841&format=json&nojsoncallback=1&auth_token=72157663602655832-93d75203aea47210&api_sig=8ad39e65e4537daf3376b0fc76af7f42";
   var apiURL = './data.json';
