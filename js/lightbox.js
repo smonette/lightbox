@@ -2,6 +2,16 @@
 var lightboxPhotos;
 var lightboxTitles;
 
+// Find the lightbox overlay
+var wrapper = document.getElementById('lightbox-wrapper');
+
+// Find navigation controls
+var dismiss = document.getElementById('lightbox-dismiss');
+var prev = document.getElementById('lightbox-prev');
+var next = document.getElementById('lightbox-next');
+
+
+
 function getPhotos(path, callback) {
   var flickrRequest = new XMLHttpRequest();
   flickrRequest.onreadystatechange = function() {
@@ -29,19 +39,20 @@ function getPhotos(path, callback) {
   flickrRequest.send(); 
 };
 
-function buildURL(farm, server, id, secret, sizeFlag) {
-  var flickrURL = '<img src="https://farm' + farm +'.staticflickr.com/' + server + '/'+ id + '_' + secret + sizeFlag + '.jpg" />';
+function buildURL(farm, server, id, secret, sizeFlag, index) {
+  var flickrURL = '<img src="https://farm' + farm +'.staticflickr.com/' + server + '/'+ id + '_' + secret + sizeFlag + '.jpg" "data-id="' + i + '"/>';
   return flickrURL;
 };
 
 function loadThumbs(data, index){
-  var flickrURL = buildURL(data[index].farm, data[index].server, data[index].id, data[index].secret, '_q');
+  var flickrURL = buildURL(data[index].farm, data[index].server, data[index].id, data[index].secret, '_q', i);
   var thumb = '<div class="image-thumbnail"><a href="#" class="thumbnail-target" data-index="'+ i +'" data-user="'+ data[index].owner +'" data-id="' + data[i].id + '"'+ '>'+ flickrURL +'</a></div>';
   document.getElementById('photogrid').innerHTML += thumb;
 };
 
 function loadLightbox(data, index){
-  var flickrURL = buildURL(data[index].farm, data[index].server, data[index].id, data[index].secret, '');
+  // set navigation buttons
+  var flickrURL = buildURL(data[index].farm, data[index].server, data[index].id, data[index].secret, '', i);
   var flickrTitle = data[index].title;
   lightboxPhotos.push(flickrURL);
   lightboxTitles.push(flickrTitle);
@@ -50,23 +61,43 @@ function loadLightbox(data, index){
 
 function lightboxInit() {
   var thumbnails = document.getElementsByClassName('thumbnail-target');
+
   for (var i = 0; i < thumbnails.length; i++) {
     thumbnails[i].addEventListener('click', function(event){
       event.preventDefault();
-      lightbox(this);
+      lightbox( this.getAttribute("data-index") );
     }, false);
   }
 }
 
 var lightbox = function(image) {
-  var whichThumb = image.getAttribute("data-index");
-  var theImage = lightboxPhotos[whichThumb];
-  var theTitle = lightboxTitles[whichThumb];
+  var theImage = lightboxPhotos[image];
+  var theTitle = lightboxTitles[image];
 
-  document.getElementById('lightbox-wrapper').setAttribute("class", "active");
-  document.getElementById('lightbox-image').innerHTML = theImage;
+  wrapper.setAttribute("class", "active");
+  // append previous and next data to the controls
+  prev.setAttribute("data-prev", parseInt(image)-1);
+  next.setAttribute("data-next",parseInt(image)+1);
+  document.getElementById('lightbox-image_container').innerHTML = theImage;
   document.getElementById('lightbox-image_title').innerHTML = theTitle;
 };
+
+
+dismiss.onclick = function(event) {
+  event.preventDefault();
+  wrapper.setAttribute("class", "inactive");
+}
+prev.onclick = function(event) {
+  event.preventDefault();
+  var prevImg = this.getAttribute("data-prev");
+  lightbox(prevImg);
+}
+next.onclick = function(event) {
+  event.preventDefault();
+  var nextImg = this.getAttribute("data-next");
+  lightbox(nextImg);
+}
+
 
 
 

@@ -103,7 +103,7 @@ header {
 
 .page-title {
   color: #56B68B;
-  animation: h1-colors 5s ease-in 2s infinite alternate; }
+  animation: h1-colors 5s ease-in 0s infinite alternate; }
 
 .flourish:before,
 .flourish:after {
@@ -131,8 +131,9 @@ header {
   position: fixed;
   background: rgba(0, 0, 0, 0.8);
   width: 100%;
-  height: 100%;
-  visibility: hidden; }
+  height: 100%; }
+  #lightbox-wrapper.inactive {
+    visibility: hidden; }
   #lightbox-wrapper.active {
     visibility: visible;
     z-index: 10; }
@@ -148,6 +149,10 @@ header {
 
 .lightbox-image img {
   box-shadow: 3px 15px 35px #000; }
+
+.lightbox-image_title {
+  margin-top: 20px;
+  color: #fff; }
 
 .lightbox-nav {
   position: absolute;
@@ -170,4 +175,5 @@ header {
 
 .lightbox-nav_dismiss {
   bottom: 0;
+  left: 47%;
   font-size: 40px; }
