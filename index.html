@@ -41,13 +41,13 @@
 <script>
 
   // !!! NOTE ABOUT THE API !!!
-  // My flickr API auth is expiring after about a day or so, and I can't find a fix for this.
-  // For demo purposes, I've added the JSON data to a file included within this project.
-  // Added perk: it works off-line if needed.
-  // Downside: to run this locally you need to set up a server to avoid cross origin request errors
+  // In the event that that occurs the auth expires, the internet goes down, etc. I've saved the response data to `data.json`
+  // Downside: to run this locally you'll need to set up a server to avoid cross origin request errors
 
-  // var apiURL = "https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=4da893af7b3c7f48d653b90f421fce49&gallery_id=72157663033498841&format=json&nojsoncallback=1&auth_token=72157663602655832-93d75203aea47210&api_sig=8ad39e65e4537daf3376b0fc76af7f42";
-  var apiURL = './data.json';
+  var apiURL = 'https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&format=json&nojsoncallback=1&gallery_id=72157663033498841&api_key=b3060d7be38e840f6777ea9f9b7b3824';
+
+  // IN CASE OF EMERGENCY UNCOMMENT
+  // var apiURL = './data.json';
 
   window.onload = function() {
     //initialize the photo request

@@ -21,7 +21,7 @@ A demo is available [here!](http://stephmonette.com/lightbox/)
 * display the photo title
 
 ## Getting Set Up
-This project uses Grunt, [Grunt Sass](https://github.com/sindresorhus/grunt-sass), and [Grunt Contrib Watch](https://github.com/gruntjs/grunt-contrib-watch) to process Sass. 
+This project uses [Grunt](http://gruntjs.com/), [Grunt Sass](https://github.com/sindresorhus/grunt-sass), and [Grunt Contrib Watch](https://github.com/gruntjs/grunt-contrib-watch) to process Sass. 
 
 * Run `npm install` to install the dependencies. 
 * Run `grunt compile` to build the project (this will create the `css` folder). 
@@ -29,9 +29,9 @@ This project uses Grunt, [Grunt Sass](https://github.com/sindresorhus/grunt-sass
 * Spin up a local server and open site. _I use [Anvil](http://anvilformac.com/), but any simple server should do the trick._
 
 ## API Info
-This gallery is built using the flickr API, and displays a currated gallery of photos from [New Years 2016](https://www.flickr.com/photos/flickr/galleries/72157663033498841/). 
+This gallery is built using the flickr API, and displays a curated gallery of photos from [New Years 2016](https://www.flickr.com/photos/flickr/galleries/72157663033498841/). 
 
-I noticed that my auth is expiring after a day. As a safeguard I saved a copy the response data in `data.json` that can be called locally, and while offline. (A sample API URL is also set, but commented out.) For this reason it's _very_ important to run this on a server (as opposed to just opening `index.html`), and avoid the dreaded :skull:cross origin request errors:skull:.
+In the event that the auth expires, or the internet goes out, I saved a copy the response data in `data.json` that can just be called locally. (The link is also set in the code, but commented out.) If you use the local data it's _very_ important to run the site on a server (as opposed to just opening `index.html`), and avoid the dreaded :skull:cross origin request errors:skull:.
 
 ### Helpful Links
 * [Flickr's API Docs](https://www.flickr.com/services/api/)
