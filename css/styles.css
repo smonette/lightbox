@@ -63,7 +63,7 @@ body {
   background-color: #f3f3f3; }
 
 .row {
-  max-width: 1200px;
+  max-width: 1024px;
   margin: 0 auto; }
 
 h1 {
@@ -82,12 +82,9 @@ a {
   a:hover {
     color: #327456; }
 
-.type-centered {
-  text-align: center; }
-
 header {
   background-color: #fff;
-  border-bottom: 3px solid #e6e6e6;
+  border-bottom: 2px solid #e6e6e6;
   padding-top: 20px;
   padding-bottom: 20px; }
 
@@ -103,6 +100,7 @@ header {
 
 .page-title {
   color: #56B68B;
+  text-align: center;
   animation: h1-colors 5s ease-in 0s infinite alternate; }
 
 .flourish:before,
@@ -110,12 +108,23 @@ header {
   content: '✨';
   padding: 0 15px; }
 
+footer {
+  margin-top: 40px;
+  padding: 40px 0 20px;
+  text-align: center; }
+
+.footer-divider {
+  padding: 0 5px; }
+
+.image-thumbnails {
+  margin-top: 40px; }
+
 .image-thumbnail {
   display: inline-block;
   overflow: hidden;
   border-radius: 3px;
-  margin-top: 20px;
   margin-right: 10px;
+  margin-bottom: 20px;
   margin-left: 10px;
   transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
@@ -125,11 +134,12 @@ header {
   .image-thumbnail:hover {
     transform: scale(1.02);
     -webkit-transform: scale(1.02);
-    -moz-transform: scale(1.02); }
+    -moz-transform: scale(1.02);
+    box-shadow: 1px 2px 10px rgba(85, 84, 89, 0.6); }
 
 #lightbox-wrapper {
   position: fixed;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   width: 100%;
   height: 100%; }
   #lightbox-wrapper.inactive {
@@ -148,7 +158,7 @@ header {
   text-align: center; }
 
 .lightbox-image img {
-  box-shadow: 3px 15px 35px #000; }
+  box-shadow: 1px 5px 35px #000; }
 
 .lightbox-image_title {
   margin-top: 20px;
@@ -164,6 +174,8 @@ header {
   padding: 5px; }
   .lightbox-nav:hover {
     color: #edb431; }
+  .lightbox-nav.inactive {
+    visibility: hidden; }
 
 .lightbox-nav_prev {
   left: 0;

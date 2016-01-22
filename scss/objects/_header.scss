@@ -1,6 +1,6 @@
 header {
   background-color: #fff;
-  border-bottom: 3px solid darken($lt-grey, 5%);
+  border-bottom: 2px solid darken($lt-grey, 5%);
   padding-top: $space;
   padding-bottom: $space;
 }
@@ -15,6 +15,7 @@ header {
 
 .page-title {
   color: $mint;
+  text-align: center;
   animation: h1-colors 5s ease-in 0s infinite alternate;
 }
 

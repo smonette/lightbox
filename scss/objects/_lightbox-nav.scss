@@ -3,6 +3,7 @@
   color: #fff;
   padding: 5px;
   &:hover { color: $orange; }
+  &.inactive { visibility: hidden; }
 }
 .lightbox-nav_prev {
   left: 0;

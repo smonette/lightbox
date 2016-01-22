@@ -8,7 +8,7 @@ body {
 }
 // TODO: Make this look good on phone
 .row {
-  max-width: 1200px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
@@ -27,9 +27,4 @@ a {
   line-height: 0;
   color: $mint;
   &:hover { color: darken($mint, 20%); }
-}
-
-// functional typography
-.type-centered {
-  text-align: center;
 }

@@ -27,7 +27,7 @@ function getPhotos(path, callback) {
           loadThumbs(photos, i);
           // add each to the array of lightbox images
           loadLightbox(photos, i);
-          // after getPhotos() runs, you can initialize the lightbox
+          // after getPhotos() finishes, you can initialize the lightbox
           lightboxInit();
         };
       }
@@ -73,8 +73,8 @@ function lightbox(image) {
   wrapper.setAttribute("class", "active");
   // append previous and next data to the controls
   prev.setAttribute("data-prev", parseInt(image)-1);
+  // TODO: Don't let next increment on last image
   next.setAttribute("data-next",parseInt(image)+1);
-  // TODO: Make sure you can't navigate past the last image, or before the first one
   document.getElementById('lightbox-image_container').innerHTML = theImage;
   document.getElementById('lightbox-image_title').innerHTML = theTitle;
 };
@@ -87,11 +87,15 @@ dismiss.onclick = function(event) {
 prev.onclick = function(event) {
   event.preventDefault();
   var prevImg = this.getAttribute("data-prev");
-  lightbox(prevImg);
+  if(prevImg >= 0) {
+    // TODO: hide prev control if first image
+    lightbox(prevImg);
+  }
 };
 next.onclick = function(event) {
   event.preventDefault();
   var nextImg = this.getAttribute("data-next");
+  // TODO: hide next control if last image, also prevent slideshow from advancing
   lightbox(nextImg);
 };
 
