@@ -1,4 +1,4 @@
-# lightbox :camera::camera::camera:
+# lightbox :camera:
 
 This is a vanilla Javascript lightbox, that calls the [Flickr API](https://www.flickr.com/services/api/explore/flickr.photosets.getPhotos). Styles are written in Sass, and compiled with [Grunt](http://gruntjs.com/).
 
@@ -10,7 +10,7 @@ A demo is available [here!](http://stephmonette.com/lightbox/)
 * [API Info](#API-info) 
 * [Helpful Links](#relevant-links)
 * [TODO](#todo)
-** [Features Wishlist](#features-wishlist)
+  *[Features Wishlist](#features-wishlist)
 
 ### Goals
 * access a public photo API
@@ -37,15 +37,16 @@ I noticed that my auth is expiring after a day. For this reason I included the d
 * [Flickr API Explorer](https://www.flickr.com/services/api/explore/flickr.galleries.getPhotos)
 * [Flickr Image Size Flags](https://www.flickr.com/services/api/misc.urls.html)
 
+---
 
 ### TODO
 Improvements:
 * Make this work on all devices. Currently only stable on desktop.
-** Rescale images in the overlay to fit within a device's screen size.
+  * Rescale images in the overlay to fit within a device's screen size.
 * If a user clicks on the blank parts of the overlay, dismiss it.
 * Preload images in the lightbox, so that there's no lag.
 * Hide `Previous` control on first image, and `Next` control on last image
-** Prevent slideshow from advancing
+  * Prevent slideshow from advancing
 
 
 #### Features Wishlist
