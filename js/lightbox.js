@@ -10,8 +10,6 @@ var dismiss = document.getElementById('lightbox-dismiss');
 var prev = document.getElementById('lightbox-prev');
 var next = document.getElementById('lightbox-next');
 
-
-
 function getPhotos(path, callback) {
   var flickrRequest = new XMLHttpRequest();
   flickrRequest.onreadystatechange = function() {
@@ -58,7 +56,6 @@ function loadLightbox(data, index){
   lightboxTitles.push(flickrTitle);
 }
 
-
 function lightboxInit() {
   var thumbnails = document.getElementsByClassName('thumbnail-target');
 
@@ -81,7 +78,6 @@ var lightbox = function(image) {
   document.getElementById('lightbox-image_container').innerHTML = theImage;
   document.getElementById('lightbox-image_title').innerHTML = theTitle;
 };
-
 
 dismiss.onclick = function(event) {
   event.preventDefault();

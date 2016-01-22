@@ -141,8 +141,8 @@ header {
 .lightbox-content {
   position: relative;
   max-width: 500px;
-  padding-top: 10%;
-  padding-bottom: 40px;
+  margin-top: 40px;
+  padding-top: 40px;
   margin-right: auto;
   margin-left: auto;
   text-align: center; }
@@ -163,17 +163,17 @@ header {
 
 .lightbox-nav_prev {
   left: 0;
-  bottom: 0; }
+  top: 0; }
   .lightbox-nav_prev:before {
     content: '👈'; }
 
 .lightbox-nav_next {
   right: 0;
-  bottom: 0; }
+  top: 0; }
   .lightbox-nav_next:after {
     content: '👉'; }
 
 .lightbox-nav_dismiss {
-  bottom: 0;
+  top: 0;
   left: 47%;
   font-size: 40px; }
