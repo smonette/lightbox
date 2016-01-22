@@ -1,4 +1,5 @@
 // TODO: Make this look good on phone
+// TODO: Applying styles to an ID gives me the heebie jeebies. Move to class.
 #lightbox-wrapper {
   position: fixed;
   background: rgba(#000, 0.9);
@@ -27,10 +28,4 @@
 .lightbox-image_title {
   margin-top: $space;
   color: #fff;
-  &:before {
-    content: '';
-  }
-  &:after {
-    content: '';
-  }
 }

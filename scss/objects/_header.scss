@@ -4,21 +4,18 @@ header {
   padding-top: $space;
   padding-bottom: $space;
 }
-
-// Cycle through colors, because New Years is joyful and the header should be too!
-@keyframes h1-colors {
+// Change text colors. New Years is joyful, so the header should be too! ;)
+@keyframes happy-text {
   0%   { color: $mint; }
   25%   { color: $orange; }
   50%   { color: $pink; }
   75%   { color: $blue; }
 }
-
 .page-title {
   color: $mint;
   text-align: center;
-  animation: h1-colors 5s ease-in 0s infinite alternate;
+  animation: happy-text 5s ease-in 0s infinite alternate;
 }
-
 .flourish:before,
 .flourish:after {
   content:'✨';

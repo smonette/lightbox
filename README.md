@@ -31,7 +31,7 @@ This project uses Grunt, [Grunt Sass](https://github.com/sindresorhus/grunt-sass
 ## API Info
 This gallery is built using the flickr API, and displays a currated gallery of photos from [New Years 2016](https://www.flickr.com/photos/flickr/galleries/72157663033498841/). 
 
-I noticed that my auth is expiring after a day. For this reason I included the data in `data.json` that can be called locally, and while offline. (A sample API URL is also set, but commented out above.) For this reason it's _very_ important to run this on a server (as opposed to just opening `index.html`), and avoid the dreaded :skull:cross origin request errors:skull:.
+I noticed that my auth is expiring after a day. As a safeguard I saved a copy the response data in `data.json` that can be called locally, and while offline. (A sample API URL is also set, but commented out.) For this reason it's _very_ important to run this on a server (as opposed to just opening `index.html`), and avoid the dreaded :skull:cross origin request errors:skull:.
 
 ### Helpful Links
 * [Flickr's API Docs](https://www.flickr.com/services/api/)
@@ -39,6 +39,7 @@ I noticed that my auth is expiring after a day. For this reason I included the d
 * [Flickr Image Size Flags](https://www.flickr.com/services/api/misc.urls.html)
 
 ---
+
 ## ETC
 
 ### TODO
