@@ -9,8 +9,9 @@ A demo is available [here!](http://stephmonette.com/lightbox/)
 * [Getting Set Up](#getting-set-up)
 * [API Info](#API-info) 
 * [Helpful Links](#relevant-links)
+
 * [TODO](#todo)
-  *[Features Wishlist](#features-wishlist)
+  * [Features Wishlist](#features-wishlist)
 
 ### Goals
 * access a public photo API
