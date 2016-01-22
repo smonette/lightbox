@@ -37,20 +37,20 @@ function getPhotos(path, callback) {
   flickrRequest.send(); 
 };
 
-function buildURL(farm, server, id, secret, sizeFlag, index) {
-  var flickrURL = '<img src="https://farm' + farm +'.staticflickr.com/' + server + '/'+ id + '_' + secret + sizeFlag + '.jpg" "data-id="' + i + '"/>';
+function buildURL(farm, server, id, secret, sizeFlag, title, index) {
+  var flickrURL = '<img src="https://farm' + farm +'.staticflickr.com/' + server + '/'+ id + '_' + secret + sizeFlag + '.jpg" alt="'+ title +'" "data-id="' + i + '"/>';
   return flickrURL;
 };
 
 function loadThumbs(data, index){
-  var flickrURL = buildURL(data[index].farm, data[index].server, data[index].id, data[index].secret, '_q', i);
+  var flickrURL = buildURL(data[index].farm, data[index].server, data[index].id, data[index].secret, '_q', data[index].title, i);
   var thumb = '<div class="image-thumbnail"><a href="#" class="thumbnail-target" data-index="'+ i +'" data-user="'+ data[index].owner +'" data-id="' + data[i].id + '"'+ '>'+ flickrURL +'</a></div>';
   document.getElementById('photogrid').innerHTML += thumb;
 };
 
 function loadLightbox(data, index){
   // set navigation buttons
-  var flickrURL = buildURL(data[index].farm, data[index].server, data[index].id, data[index].secret, '', i);
+  var flickrURL = buildURL(data[index].farm, data[index].server, data[index].id, data[index].secret, '', data[index].title, i);
   var flickrTitle = data[index].title;
   lightboxPhotos.push(flickrURL);
   lightboxTitles.push(flickrTitle);
