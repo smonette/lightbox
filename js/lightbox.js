@@ -104,7 +104,10 @@ document.onkeydown = function (event) {
   if (event.keyCode == '37'){
     event.preventDefault(); 
     var prevImg = prev.getAttribute("data-prev"); 
-    lightbox(prevImg); 
+    if(prevImg >= 0) {
+      // TODO: hide prev control if first image
+      lightbox(prevImg);
+    }
   } else if (event.keyCode == '39') {
     event.preventDefault(); 
     var nextImg = next.getAttribute("data-next"); 
