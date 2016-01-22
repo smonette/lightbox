@@ -5,6 +5,7 @@ header {
   padding-bottom: $space;
 }
 
+// Cycle through colors, because New Years is joyful and the header should be too!
 @keyframes h1-colors {
   0%   { color: $mint; }
   25%   { color: $orange; }

@@ -153,6 +153,10 @@ header {
 .lightbox-image_title {
   margin-top: 20px;
   color: #fff; }
+  .lightbox-image_title:before {
+    content: ''; }
+  .lightbox-image_title:after {
+    content: ''; }
 
 .lightbox-nav {
   position: absolute;

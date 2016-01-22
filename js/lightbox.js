@@ -54,20 +54,19 @@ function loadLightbox(data, index){
   var flickrTitle = data[index].title;
   lightboxPhotos.push(flickrURL);
   lightboxTitles.push(flickrTitle);
-}
+};
 
 function lightboxInit() {
   var thumbnails = document.getElementsByClassName('thumbnail-target');
-
   for (var i = 0; i < thumbnails.length; i++) {
     thumbnails[i].addEventListener('click', function(event){
       event.preventDefault();
       lightbox( this.getAttribute("data-index") );
     }, false);
   }
-}
+};
 
-var lightbox = function(image) {
+function lightbox(image) {
   var theImage = lightboxPhotos[image];
   var theTitle = lightboxTitles[image];
 
@@ -75,26 +74,27 @@ var lightbox = function(image) {
   // append previous and next data to the controls
   prev.setAttribute("data-prev", parseInt(image)-1);
   next.setAttribute("data-next",parseInt(image)+1);
-  // TODO! Make sure you can't navigate past the last image, or before the first one
+  // TODO: Make sure you can't navigate past the last image, or before the first one
   document.getElementById('lightbox-image_container').innerHTML = theImage;
   document.getElementById('lightbox-image_title').innerHTML = theTitle;
 };
 
+// Lightbox navigation controls
 dismiss.onclick = function(event) {
   event.preventDefault();
   wrapper.setAttribute("class", "inactive");
-}
-
+};
 prev.onclick = function(event) {
   event.preventDefault();
   var prevImg = this.getAttribute("data-prev");
   lightbox(prevImg);
-}
+};
 next.onclick = function(event) {
   event.preventDefault();
   var nextImg = this.getAttribute("data-next");
   lightbox(nextImg);
-}
+};
+
 // prev and next functionality so it works with the arrow keys
 document.onkeydown = function (event) { 
   if (event.keyCode == '37'){
@@ -106,7 +106,7 @@ document.onkeydown = function (event) {
     var nextImg = next.getAttribute("data-next"); 
     lightbox(nextImg); 
   }
-}
+};
 
 
 

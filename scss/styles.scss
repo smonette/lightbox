@@ -1,10 +1,11 @@
-// Utilities
+// UTILITIES
 @import "reset";
 @import "variables";
 @import "defaults";
 
-// Objects
+// OBJECTS
 @import "objects/header";
 @import "objects/footer";
 @import "objects/thumbnails";
 @import "objects/lightbox";
+@import "objects/lightbox-nav";

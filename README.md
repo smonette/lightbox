@@ -7,6 +7,7 @@ Contents
 * [Getting Set Up](#getting-set-up)
 * [API Info](#API-info)
 
+
 ### Goals
 * access a public photo API
 * create a web page that shows a grid of photo thumbnails

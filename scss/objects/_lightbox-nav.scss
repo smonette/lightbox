@@ -1,0 +1,21 @@
+.lightbox-nav {
+  position: absolute;
+  color: #fff;
+  padding: 5px;
+  &:hover { color: $orange; }
+}
+.lightbox-nav_prev {
+  left: 0;
+  top: 0;
+  &:before { content: '👈'; }
+}
+.lightbox-nav_next {
+  right: 0;
+  top: 0;
+  &:after { content: '👉'; }
+}
+.lightbox-nav_dismiss {
+  top: 0;
+  left: 47%;
+  font-size: 40px;
+}
