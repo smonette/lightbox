@@ -46,10 +46,12 @@ In the event that the auth expires, or the internet goes out, I saved a copy the
 I've marked places where improvements need to be made with a comment starting `TODO:`. This should make it easy to search all and find at a later date.
 * Make this work on all devices. Currently only stable on desktop.
   * Rescale images in the overlay to fit within a device's screen size.
+* Add a loading message/indicator in case there's a lag in the request
 * If a user clicks on the blank parts of the overlay, dismiss it.
 * Preload images in the lightbox, so that there's no lag.
 * Hide `Previous` control on first image, and `Next` control on last image
   * Prevent slideshow from advancing
+
 
 ### Features Wishlist
 As I was working on this there were times where I'd think to myself "You know what would be great...?"
