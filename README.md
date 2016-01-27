@@ -31,7 +31,7 @@ This project uses [Grunt](http://gruntjs.com/), [Grunt Sass](https://github.com/
 ## API Info
 This gallery is built using the flickr API, and displays a curated gallery of photos from [New Years 2016](https://www.flickr.com/photos/flickr/galleries/72157663033498841/). 
 
-In the event that the auth expires, or the internet goes out, I saved a copy the response data in `data.json` that can just be called locally. (The link is also set in the code, but commented out.) If you use the local data it's _very_ important to run the site on a server (as opposed to just opening `index.html`), and avoid the dreaded :skull:cross origin request errors:skull:.
+I saved a copy the response data in `data.json` that can just be called locally if you're working offline. (The link is also set in the code, but commented out.) If you use the local data it's _very_ important to run the site on a server (as opposed to just opening `index.html`), and avoid the dreaded :skull:cross origin request errors:skull:.
 
 ### Helpful Links
 * [Flickr's API Docs](https://www.flickr.com/services/api/)
@@ -43,7 +43,7 @@ In the event that the auth expires, or the internet goes out, I saved a copy the
 ## ETC
 
 ### TODO
-I've marked places where improvements need to be made with a comment starting `TODO:`. This should make it easy to search all and find at a later date.
+I've marked places where improvements need to be made with a comment starting `TODO:`. 
 * Make this work on all devices. Currently only stable on desktop.
   * Rescale images in the overlay to fit within a device's screen size.
 * Add a loading message/indicator in case there's a lag in the request
@@ -54,6 +54,5 @@ I've marked places where improvements need to be made with a comment starting `T
 
 
 ### Features Wishlist
-As I was working on this there were times where I'd think to myself "You know what would be great...?"
 * Text search for photos. [Could be done](https://www.flickr.com/services/api/flickr.photos.search.html) with the `text` param?
 * Swipe through images on touch devices
